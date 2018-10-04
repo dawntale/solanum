@@ -35,3 +35,15 @@ function _s_pingback_header() {
 	}
 }
 add_action( 'wp_head', '_s_pingback_header' );
+
+
+/**
+ * Filter the except length to 80 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 80;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );

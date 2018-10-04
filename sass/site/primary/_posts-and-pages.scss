@@ -13,10 +13,23 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 0;
+	padding: 1.25rem;
 }
 
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.single {
+	.post,
+	.comments-area {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.card {
+		margin-top: 0;
+	}
 }

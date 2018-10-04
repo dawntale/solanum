@@ -1,0 +1,27 @@
+.pagination,
+.post-navigation {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.pagination {
+	.nav-links {
+		text-align: center;
+		border-radius: $border__radius-1;
+		font-size: .9rem;
+	}
+
+	.page-numbers {
+		background-color: $color__background-screen;
+		display: inline-block;
+		padding: .5rem .75rem;
+		line-height: 1;
+		text-decoration: none;
+		border-radius: $border__radius-1;
+	}
+
+	.page-numbers.current,
+	a.page-numbers:hover {
+		background: tomato;
+	}
+}

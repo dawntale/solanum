@@ -1,8 +1,14 @@
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
 	width: 100%;
+	background-color: #fff;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+
+	>div {
+		display: flex;
+	}
 
 	ul {
 		display: none;
@@ -50,8 +56,8 @@
 	}
 
 	li {
-		float: left;
 		position: relative;
+		padding: .75rem;
 
 		&:hover > a,
 		&.focus > a {
@@ -67,6 +73,12 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		color: white;
+	}
+
+	.current_page_item,
+	.current-menu-item {
+		background-color: tomato;
 	}
 }
 
@@ -81,7 +93,8 @@
 		display: none;
 	}
 	.main-navigation ul {
-		display: block;
+		display: flex;
+		margin: auto;
 	}
 }
 

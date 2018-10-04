@@ -1,8 +1,17 @@
 .widget {
-	margin: 0 0 1.5em;
+	margin: 0 0 30px;
+	padding: 1.25rem;
+	background-color: $color__background-screen;
+	border-radius: $border__radius-1;
 
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
 	}
+}
+
+.widget-title {
+	font-size: 1.5rem;
+	margin-top: 0;
+	margin-bottom: 1rem;
 }

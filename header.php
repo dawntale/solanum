@@ -14,8 +14,9 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link href="https://fonts.googleapis.com/css?family=KoHo|Srisakdi:700&amp;subset=latin-ext" rel="stylesheet">
 
 	<?php wp_head(); ?>
 </head>
@@ -24,7 +25,8 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header text-center">
+		
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -53,6 +55,11 @@
 			) );
 			?>
 		</nav><!-- #site-navigation -->
+
+		<div class="header-image">
+			<img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+		</div>
+		
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content container-fluid px-3 px-md-5">

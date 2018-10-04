@@ -4,3 +4,18 @@
 .bypostauthor {
 	display: block;
 }
+
+.comments-index,
+.comment-respond {
+	padding: 1.25rem;
+	background-color: $color__background-screen;
+	margin-bottom: 30px;
+	border-radius: $border__radius-1;
+}
+
+.comments-title,
+.comment-reply-title {
+	font-size: 1.5rem;
+	margin-top: 0;
+    margin-bottom: 1rem;
+}

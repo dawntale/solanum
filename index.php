@@ -16,7 +16,8 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" class="site-main <?php if ( is_home() ): ?> grid <?php endif; ?>">
+			<div class="grid-sizer col-sm-6 col-lg-4 col-xl-3"></div>
 
 		<?php
 		if ( have_posts() ) :
@@ -42,7 +43,7 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
+			
 
 		else :
 
@@ -52,6 +53,13 @@ get_header();
 		?>
 
 		</main><!-- #main -->
+
+		<?php the_posts_pagination( array(
+			'mid_size'  => 2,
+			'prev_text' => __( '&#8249; Prev', 'textdomain' ),
+			'next_text' => __( 'Next &#8250;', 'textdomain' ),
+		) ); ?>
+
 	</div><!-- #primary -->
 
 <?php

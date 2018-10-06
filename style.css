@@ -783,13 +783,21 @@ a {
   clear: both;
   margin: 0 0 1.5em; }
 
-.single .post,
-.single .comments-area {
+article.post, article.page {
+  padding-left: 15px;
+  padding-right: 15px; }
+  article.post .card, article.page .card {
+    margin-top: 0; }
+
+.comments-area {
   padding-left: 15px;
   padding-right: 15px; }
 
-.single .card {
-  margin-top: 0; }
+@media (min-width: 768px) {
+  article.post, article.page {
+    padding-left: 0px; }
+  .comments-area {
+    padding-left: 0px; } }
 
 /*--------------------------------------------------------------
 ## Comments

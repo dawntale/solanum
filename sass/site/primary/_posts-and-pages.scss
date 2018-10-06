@@ -22,14 +22,32 @@
 	margin: 0 0 1.5em;
 }
 
-.single {
-	.post,
-	.comments-area {
+article {
+	&.post,
+	&.page {
 		padding-left: 15px;
 		padding-right: 15px;
+
+		.card {
+			margin-top: 0;
+		}
+	}
+}
+
+.comments-area {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+    article {
+		&.post,
+		&.page {
+			padding-left: 0px;
+		}
 	}
 
-	.card {
-		margin-top: 0;
+	.comments-area {
+		padding-left: 0px;
 	}
 }

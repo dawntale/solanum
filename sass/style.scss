@@ -124,6 +124,23 @@ html {
 	font-size: 14px;
 }
 
+.site-branding {
+	padding: 2rem 0;
+
+	.site-title {
+		font-family: $font__alternative;
+		font-size: 3rem;
+		margin: 0;
+		line-height: 1.5;
+	}
+
+	.site-description {
+		font-size: 1.3rem;
+		margin: .75rem 0 0;
+	}
+}
+	
+
 .site-content {
 	top: -3rem;
 	position: relative;
@@ -254,7 +271,7 @@ html {
 
 .site-footer {
 	background-color: $color__background-bluegray;
-	padding: 1rem 0;
+	padding: 2rem 0 1rem;
 
 	.site-info {
 		text-align: center;

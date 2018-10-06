@@ -557,7 +557,26 @@ a {
   width: 100%;
   background-color: #fff;
   border-top: 1px solid #000;
-  border-bottom: 1px solid #000; }
+  border-bottom: 1px solid #000;
+  /* Rotate first bar */
+  /* Fade out the second bar */
+  /* Rotate last bar */ }
+  .main-navigation .bar1, .main-navigation .bar2, .main-navigation .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s; }
+  .main-navigation.toggled .bar1 {
+    -webkit-transform: rotate(-135deg) translate(-8px, -8px);
+    transform: rotate(-135deg) translate(-8px, -8px); }
+  .main-navigation.toggled .bar2 {
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+    opacity: 0; }
+  .main-navigation.toggled .bar3 {
+    -webkit-transform: rotate(135deg) translate(-8px, 8px);
+    transform: rotate(135deg) translate(-8px, 8px); }
   .main-navigation > div {
     display: flex; }
   .main-navigation ul {
@@ -575,20 +594,24 @@ a {
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        left: 100%; }
+      .main-navigation ul ul li {
+        background-color: #fff; }
+        .main-navigation ul ul li:hover > ul,
+        .main-navigation ul ul li.focus > ul {
+          left: 100%; }
       .main-navigation ul ul a {
         width: 200px; }
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
       left: auto; }
+  .main-navigation.toggled ul {
+    width: 100%; }
   .main-navigation li {
-    position: relative;
-    padding: .75rem; }
+    position: relative; }
   .main-navigation a {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    padding: .75rem; }
   .main-navigation .current_page_item > a,
   .main-navigation .current-menu-item > a,
   .main-navigation .current_page_ancestor > a,
@@ -603,7 +626,7 @@ a {
 .main-navigation.toggled ul {
   display: block; }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 782px) {
   .menu-toggle {
     display: none; }
   .main-navigation ul {

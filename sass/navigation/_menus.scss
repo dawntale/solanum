@@ -42,7 +42,7 @@
 		transform: rotate(135deg) translate(-8px, 8px);
 	}
 
-	>div {
+	.menu-menu-1-container {
 		display: flex;
 	}
 
@@ -200,4 +200,46 @@
 		text-align: right;
 		width: 50%;
 	}
+}
+
+.search-box-wrapper {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+    top: 48px;
+
+    &.hide {
+	    display: none;
+	}
+}
+
+.search-box {
+    background-color: gray;
+    padding: 12px;
+}
+
+.search-toggle {
+	background-color: lightgray;
+    cursor: pointer;
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    text-align: center;
+    right: 0;
+    top: 0;
+
+    &:before {
+		color: tomato;
+		content: "o";
+		font-size: 20px;
+		margin-top: 14px;
+    }
+
+    &.active {
+    	background-color: gray;
+    }
 }

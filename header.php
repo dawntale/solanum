@@ -25,7 +25,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
-	<header id="masthead" class="site-header text-center">
+	<header id="masthead" class="site-header">
 		
 		<div class="site-branding">
 			<?php
@@ -58,6 +58,15 @@
 				'menu_id'        => 'primary-menu',
 			) );
 			?>
+			<div class="search-toggle">
+				<a href="#search-container" class="screen-reader-text" aria-expanded="false" aria-controls="search-container"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
+			</div>
+
+			<div id="search-container" class="search-box-wrapper hide">
+				<div class="search-box">
+					<?php get_search_form(); ?>
+				</div>
+			</div>
 		</nav><!-- #site-navigation -->
 
 		<div class="header-image">

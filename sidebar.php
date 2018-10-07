@@ -13,7 +13,7 @@ if ( ! is_home() ){
 		return;
 	} ?>
 
-	<aside id="secondary" class="widget-area col-lg-4 col-xl-3">
+	<aside id="secondary" class="widget-area col-lg-4">
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
 	</aside>
 

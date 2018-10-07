@@ -33,7 +33,7 @@
 			
 		</div>
 
-		<div class="card-footer text-muted text-center">
+		<footer class="card-footer text-muted text-center">
 			<div class="avatar d-inline-flex">
 				<?php echo get_avatar( get_the_author_meta( 'ID' ), 30, $default, $alt, array( 'class' => array( 'rounded-circle' ) ) ); ?>
 				<?php _s_posted_by(); ?>
@@ -41,7 +41,7 @@
 				<ul class="meta list-inline small">
 					<?php _s_entry_footer(); ?>
 				</ul>
-		</div>
+		</footer>
 	</div>
 
 

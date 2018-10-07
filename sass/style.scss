@@ -175,7 +175,6 @@ html {
 .card {
 	background-color: $color__background-screen;
 	border-radius: $border__radius-1;
-	margin-top: calc(75px / 2);
 }
 
 .card-header {
@@ -198,9 +197,11 @@ html {
     border-top: 1px solid rgba(0,0,0,.125);
 }
 
-.has-post-thumbnail {
-	.card {
-		margin-top: 0px;
+.grid-item {
+	margin-top: 37.5px;
+
+	&.has-post-thumbnail {
+		margin-top: 0;
 	}
 }
 
@@ -310,9 +311,13 @@ html {
 		margin: 0 0 0 9rem;
 	}
 
-	.single {
+}
+
+@media (min-width: 1600px) {
+	.single,
+	.page {
 		.container-fluid {
-			max-width: 1140px;
+			max-width: 1530px;
 		}
 	}
 }

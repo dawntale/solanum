@@ -11,19 +11,21 @@ get_header();
 ?>
 
 	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+
+		<header class="page-header">
+			<h1 class="page-title">
+				<?php
+				/* translators: %s: search query. */
+				printf( esc_html__( 'Search Results for: %s', '_s' ), '<span>' . get_search_query() . '</span>' );
+				?>
+			</h1>
+		</header><!-- .page-header -->
+
+		<main id="main" class="site-main grid">
+
+			<div class="grid-sizer col-sm-6 col-lg-4 col-xl-3"></div>
 
 		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', '_s' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
-
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -38,8 +40,6 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
-
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
@@ -48,8 +48,14 @@ get_header();
 		?>
 
 		</main><!-- #main -->
+
+		<?php the_posts_pagination( array(
+			'mid_size'  => 2,
+			'prev_text' => __( '&#8249; Prev', 'textdomain' ),
+			'next_text' => __( 'Next &#8250;', 'textdomain' ),
+		) ); ?>
+		
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

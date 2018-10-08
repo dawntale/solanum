@@ -1,4 +1,16 @@
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
+
+	th {
+		padding: .75rem;
+		vertical-align: top;
+	}
+}
+
+thead {
+	th {
+		vertical-align: bottom;
+		border-bottom: 2px solid #dee2e6;
+	}
 }

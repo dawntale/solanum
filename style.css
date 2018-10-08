@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: _s
 Theme URI: https://underscores.me/
@@ -400,6 +401,44 @@ mark, ins {
 big {
   font-size: 125%; }
 
+blockquote {
+  margin: 1.5rem 1.5rem 1rem 0;
+  font-size: 1.25rem;
+  padding: 1.5rem;
+  position: relative;
+  display: inline-block; }
+
+blockquote:before {
+  content: '\201C';
+  position: absolute;
+  top: 0em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: tomato;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 99999px;
+  font: 6em/1.08em 'PT Sans', sans-serif;
+  color: white;
+  text-align: center; }
+
+blockquote:after {
+  content: "— " attr(cite);
+  display: block;
+  text-align: right;
+  font-size: 0.875em;
+  color: #e74c3c;
+  display: block;
+  font-size: 80%;
+  color: #6c757d; }
+
+cite {
+  margin-left: 1.5rem;
+  color: #6c757d; }
+
+cite::before {
+  content: "\2014 \00A0"; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -455,6 +494,13 @@ figure {
 table {
   margin: 0 0 1.5em;
   width: 100%; }
+  table th {
+    padding: .75rem;
+    vertical-align: top; }
+
+thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -872,21 +918,8 @@ a {
   clear: both;
   margin: 0 0 1.5em; }
 
-article.post, article.page {
-  padding-left: 15px;
-  padding-right: 15px; }
-  article.post .card, article.page .card {
-    margin-top: 0; }
-
-.comments-area {
-  padding-left: 15px;
-  padding-right: 15px; }
-
-@media (min-width: 768px) {
-  article.post, article.page {
-    padding-left: 0px; }
-  .comments-area {
-    padding-left: 0px; } }
+article.post .card, article.page .card {
+  margin-top: 0; }
 
 .page-header {
   background-color: #f1f1f1;
@@ -996,6 +1029,20 @@ object {
 
 .gallery-caption {
   display: block; }
+
+/*--------------------------------------------------------------
+# Table
+--------------------------------------------------------------*/
+table {
+  margin: 0 0 1.5em;
+  width: 100%; }
+  table th {
+    padding: .75rem;
+    vertical-align: top; }
+
+thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6; }
 
 /*--------------------------------------------------------------
 # Bootstrap
@@ -4218,6 +4265,8 @@ html {
     margin: 0 0 0 9rem; } }
 
 @media (min-width: 1600px) {
+  html {
+    font-size: 17px; }
   .single .container-fluid,
   .page .container-fluid {
     max-width: 1530px; } }

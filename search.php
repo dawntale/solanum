@@ -21,11 +21,13 @@ get_header();
 			</h1>
 		</header><!-- .page-header -->
 
+		<?php if ( have_posts() ) : ?>
+
 		<main id="main" class="site-main grid">
 
 			<div class="grid-sizer col-sm-6 col-lg-4 col-xl-3"></div>
 
-		<?php if ( have_posts() ) : ?>
+		
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :

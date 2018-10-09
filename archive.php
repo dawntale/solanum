@@ -11,16 +11,16 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
+		<header class="page-header">
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
+
+		<?php if ( have_posts() ) : ?>
+			<main id="main" class="site-main grid">
+				<div class="grid-sizer col-sm-6 col-lg-4 col-xl-3"></div>
 
 			<?php
 			/* Start the Loop */
@@ -36,8 +36,6 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
-
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
@@ -46,6 +44,13 @@ get_header();
 		?>
 
 		</main><!-- #main -->
+
+		<?php the_posts_pagination( array(
+			'mid_size'  => 2,
+			'prev_text' => __( '&#8249; Prev', 'textdomain' ),
+			'next_text' => __( 'Next &#8250;', 'textdomain' ),
+		) ); ?>
+
 	</div><!-- #primary -->
 
 <?php

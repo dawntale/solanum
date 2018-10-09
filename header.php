@@ -77,4 +77,4 @@
 		
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content container-fluid px-3 px-md-5">
+	<div id="content" class="site-content container-fluid">

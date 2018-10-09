@@ -16,13 +16,14 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
+		
+		<?php
+		if ( have_posts() ) : ?>
+
 		<main id="main" class="site-main <?php if ( is_home() ): ?> grid <?php endif; ?>">
 			<div class="grid-sizer col-sm-6 col-lg-4 col-xl-3"></div>
 
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
+			<?php if ( is_home() && ! is_front_page() ) :
 				?>
 				<header>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>

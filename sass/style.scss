@@ -199,6 +199,7 @@ html {
     padding: .75rem 1.25rem;
     background-color: rgba(0,0,0,.03);
     border-top: 1px solid rgba(0,0,0,.125);
+    border-radius: 0 0 $border__radius-1 $border__radius-1;
 }
 
 .sticky .card {
@@ -221,7 +222,7 @@ html {
 
 	.entry-meta {
 		position: absolute;
-		font-size: 1rem;
+		font-size: .9rem;
 		left: calc(50% - (45px / 2));
 		top: calc(0px - (75px / 2));
 
@@ -303,7 +304,8 @@ html {
 
 .site-footer {
 	background-color: $color__background-bluegray;
-	padding: 2rem 0 1rem;
+	padding: 1.5rem 2rem .75rem;
+	border-radius: 20px 20px 0 0;
 
 	.site-info {
 		text-align: center;

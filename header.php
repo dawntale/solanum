@@ -71,10 +71,12 @@
 			</div>
 		</nav><!-- #site-navigation -->
 
-		<div class="header-image">
-			<img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-		</div>
+		<?php if( has_header_image()) : ?>
+			<div class="header-image">
+				<img src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+			</div>
+		<?php endif; ?>
 		
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content container-fluid">
+	<div id="content" class="site-content container-fluid" <?php if( !has_header_image()) : ?>style="top: 30px"<?php endif; ?>>

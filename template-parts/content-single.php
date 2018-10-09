@@ -52,7 +52,7 @@
 			?>
 		</div><!-- .entry-content -->
 
-		<footer class="card-footer text-muted text-center">
+		<footer class="card-footer">
 				<ul class="meta list-inline">
 					<?php _s_entry_footer(); ?>
 				</ul>

@@ -582,9 +582,9 @@ a {
   color: royalblue;
   text-decoration: none; }
   a:visited {
-    color: purple; }
+    color: #404040; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: darkgrey; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -4124,7 +4124,7 @@ html {
   font-size: 14px; }
 
 .site-branding {
-  padding: 2rem 0; }
+  padding: 2.5rem 0; }
   .site-branding .site-title {
     font-family: "Srisakdi", sans-serif;
     font-size: 3rem;
@@ -4132,7 +4132,9 @@ html {
     line-height: 1.5; }
   .site-branding .site-description {
     font-size: 1.3rem;
-    margin: .75rem 0 0; }
+    margin: 1rem 0 0; }
+  .site-branding .custom-logo {
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.4)); }
 
 .site-header {
   position: relative;
@@ -4152,33 +4154,34 @@ html {
 
 .wp-post-image {
   width: 100%;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem; }
+  display: block; }
 
 .grid-item {
   margin-bottom: 30px; }
 
 .card {
-  background-color: #f1f1f1;
-  border-radius: 0.25rem; }
+  background-color: #f1f1f1; }
 
 .card-header {
   padding: .75rem 1.25rem;
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+  border-bottom: .75rem solid tomato; }
+  .card-header .entry-meta {
+    color: #6c757d;
+    text-align: right; }
 
 .card-body {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 1.25rem;
-  position: relative; }
+  position: relative;
+  border-top: .75rem solid tomato; }
 
 .card-footer {
   padding: .75rem 1.25rem;
-  background-color: rgba(0, 0, 0, 0.03);
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0 0 0.25rem 0.25rem; }
+  background-color: rgba(171, 183, 193, 0.35);
+  text-align: center;
+  color: #6c757d; }
 
 .sticky .card {
   background-color: beige; }
@@ -4194,7 +4197,7 @@ html {
   position: absolute;
   font-size: .9rem;
   left: calc(50% - (45px / 2));
-  top: calc(0px - (75px / 2)); }
+  top: calc(0rem - (75px / 2) - (.75rem / 2)); }
   .grid-item .entry-meta .hexagon {
     position: relative;
     display: flex;
@@ -4231,6 +4234,8 @@ html {
     -moz-transform: rotate(-60deg);
     transform: rotate(-60deg);
     transition: all 1s 1s; }
+  .grid-item .entry-meta .hexagon:hover span {
+    text-decoration: underline; }
 
 .meta {
   margin: 0;
@@ -4246,7 +4251,8 @@ html {
   font-size: 1.2rem; }
 
 .avatar {
-  margin-bottom: .25rem; }
+  margin-bottom: .25rem;
+  font-weight: bold; }
   .avatar img {
     margin-right: 10px; }
   .avatar .byline {

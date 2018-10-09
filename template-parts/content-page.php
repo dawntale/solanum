@@ -29,7 +29,7 @@
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="card-footer text-muted text-center">
+		<footer class="card-footer">
 			<ul class="meta list-inline">
 				<?php
 				edit_post_link(

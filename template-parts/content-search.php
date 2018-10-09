@@ -21,11 +21,13 @@
 			<?php if ( 'post' === get_post_type() ) :
 				?>
 				<div class="entry-meta">
-					<div class="hexagon">
-						<span>
-							<?php the_time('M j Y') ?>
-						</span>
-					</div>
+					<a href="<?php echo get_permalink( $post->ID ); ?>">
+						<div class="hexagon">
+							<span>
+								<?php the_time('M j Y') ?>
+							</span>
+						</div>
+					</a>
 				</div><!-- .entry-meta -->
 			<?php endif; ?>
 
@@ -33,7 +35,7 @@
 			
 		</div>
 
-		<footer class="card-footer text-muted text-center">
+		<footer class="card-footer">
 			<div class="avatar d-inline-flex">
 				<?php echo get_avatar( get_the_author_meta( 'ID' ), 30, $default, $alt, array( 'class' => array( 'rounded-circle' ) ) ); ?>
 				<?php _s_posted_by(); ?>

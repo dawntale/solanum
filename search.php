@@ -12,7 +12,7 @@ get_header();
 
 	<section id="primary" class="content-area">
 
-		<header class="page-header">
+		<header class="page-header col-lg-6 mx-auto">
 			<h1 class="page-title">
 				<?php
 				/* translators: %s: search query. */

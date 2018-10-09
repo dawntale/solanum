@@ -38,7 +38,7 @@
 				<?php echo get_avatar( get_the_author_meta( 'ID' ), 30, $default, $alt, array( 'class' => array( 'rounded-circle' ) ) ); ?>
 				<?php _s_posted_by(); ?>
 			</div>
-				<ul class="meta list-inline small">
+				<ul class="meta list-inline">
 					<?php _s_entry_footer(); ?>
 				</ul>
 		</footer>

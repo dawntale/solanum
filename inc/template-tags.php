@@ -62,19 +62,19 @@ if ( ! function_exists( '_s_entry_footer' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', '_s' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<li class="cat-links d-inline">' . esc_html__( 'Cat %1$s', '_s' ) . '</li>', $categories_list ); // WPCS: XSS OK.
+				printf( '<li class="cat-links d-inline"><i title="Categories" class="genericons-neue genericons-neue-category"></i>' . esc_html__( '%1$s', '_s' ) . '</li>', $categories_list ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', '_s' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<li class="tags-links d-inline">' . esc_html__( 'Tag %1$s', '_s' ) . '</li>', $tags_list ); // WPCS: XSS OK.
+				printf( '<li class="tags-links d-inline"><i title="Tags" class="genericons-neue genericons-neue-tag"></i>' . esc_html__( '%1$s', '_s' ) . '</li>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<li class="comments-link d-inline">';
+			echo '<li class="comments-link d-inline"><i title="Comments" class="genericons-neue genericons-neue-comment"></i>';
 			comments_popup_link(
 				sprintf(
 					wp_kses(
@@ -105,7 +105,7 @@ if ( ! function_exists( '_s_entry_footer' ) ) :
 				),
 				get_the_title()
 			),
-			'<li class="edit-link d-inline">',
+			'<li class="edit-link d-inline"><i title="Edit" class="genericons-neue genericons-neue-edit"></i>',
 			'</li>'
 		);
 	}

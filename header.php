@@ -19,6 +19,7 @@
 	<link href="https://fonts.googleapis.com/css?family=KoHo|Srisakdi:700&amp;subset=latin-ext" rel="stylesheet">
 
 	<?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -59,6 +60,7 @@
 			) );
 			?>
 			<div class="search-toggle">
+				<i class="genericons-neue genericons-neue-search"></i>
 				<a href="#search-container" class="screen-reader-text" aria-expanded="false" aria-controls="search-container"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
 			</div>
 

@@ -121,7 +121,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "bootstrap/scss/utilities";
 @import "bootstrap/scss/type";
 
-
 /*--------------------------------------------------------------
 ## Homepage
 --------------------------------------------------------------*/
@@ -202,60 +201,72 @@ html {
     border-top: 1px solid rgba(0,0,0,.125);
 }
 
+.sticky .card {
+	background-color: beige;
+}
+
 .grid-item {
 	margin-top: 37.5px;
+
+	&.page {
+		margin-top: 0px;
+	}
 
 	&.has-post-thumbnail {
 		margin-top: 0;
 	}
 }
 
-.entry-meta {
-	position: absolute;
-	left: calc(50% - (45px / 2));
-	top: calc(0px - (75px / 2));
+.grid-item {
 
-	.hexagon {
-	    position:relative;
-	    display: flex;
-	    margin:0 auto;
-	    background:tomato;
-	    border-radius:5px;
-	    height:75px;
-	    width:45px;
-	    transition:all 1s;
-	    color: white;
-	    font-weight: bold;
-	    text-align: center;
+	.entry-meta {
+		position: absolute;
+		font-size: 1rem;
+		left: calc(50% - (45px / 2));
+		top: calc(0px - (75px / 2));
 
-		span {
-			z-index: 1;
-			margin: auto;
+		.hexagon {
+		    position:relative;
+		    display: flex;
+		    margin:0 auto;
+		    background:tomato;
+		    border-radius:5px;
+		    height:75px;
+		    width:45px;
+		    transition:all 1s;
+		    color: white;
+		    font-weight: bold;
+		    text-align: center;
+
+			span {
+				z-index: 1;
+				margin: auto;
+			}
 		}
-	}
-	.hexagon:before, .hexagon:after {
-		content:"";
-		position:absolute;
-		top:0;
-		left:0;
-		background:inherit;
-		border-radius:inherit;
-		height:100%;
-		width:100%;
-		top:0;
-		left:0;
-	}
-	.hexagon:before {
-		-webkit-transform:rotate(60deg);
-		-moz-transform:rotate(60deg);
-		transform:rotate(60deg);
-		transition:all 1s 0.5s;
-	}
-	.hexagon:after {
-		-webkit-transform:rotate(-60deg);
-		-moz-transform:rotate(-60deg);
-		transform:rotate(-60deg);
-		transition:all 1s 1s;
+		.hexagon:before, .hexagon:after {
+			content:"";
+			position:absolute;
+			top:0;
+			left:0;
+			background:inherit;
+			border-radius:inherit;
+			height:100%;
+			width:100%;
+			top:0;
+			left:0;
+		}
+		.hexagon:before {
+			-webkit-transform:rotate(60deg);
+			-moz-transform:rotate(60deg);
+			transform:rotate(60deg);
+			transition:all 1s 0.5s;
+		}
+		.hexagon:after {
+			-webkit-transform:rotate(-60deg);
+			-moz-transform:rotate(-60deg);
+			transform:rotate(-60deg);
+			transition:all 1s 1s;
+		}
 	}
 }
 
@@ -266,6 +277,16 @@ html {
 	li:not(:last-child) {
 		margin-right: .5rem;
 	}
+
+	.genericons-neue {
+		font-size: 1.2rem;
+		margin-top: -3px;
+		margin-right: 3px;
+	}
+}
+
+.entry-meta {
+	font-size: 1.2rem;
 }
 
 .avatar {

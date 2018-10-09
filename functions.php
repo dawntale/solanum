@@ -134,6 +134,8 @@ add_action( 'widgets_init', '_s_widgets_init' );
  */
 function _s_scripts() {
 	wp_enqueue_style( '_s-style', get_stylesheet_uri() );
+	wp_enqueue_style ('genericon', get_template_directory_uri().'/genericons/genericons-neue.css', array('_s-style'));
+
 
 	wp_enqueue_script( 'jquery-3.3.1.slim.min', get_template_directory_uri() . '/js/jquery-3.3.1.slim.min.js', array(), '20151215', true );
 

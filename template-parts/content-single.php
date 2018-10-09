@@ -22,10 +22,8 @@
 			if ( 'post' === get_post_type() ) :
 				?>
 				<div class="entry-meta">
-					<?php
-					_s_posted_on();
-					_s_posted_by();
-					?>
+					<?php _s_posted_on(); ?> by
+					<?php _s_posted_by(); ?>
 				</div><!-- .entry-meta -->
 			<?php endif; ?>
 		</header><!-- .entry-header -->
@@ -55,7 +53,7 @@
 		</div><!-- .entry-content -->
 
 		<footer class="card-footer text-muted text-center">
-				<ul class="meta list-inline small">
+				<ul class="meta list-inline">
 					<?php _s_entry_footer(); ?>
 				</ul>
 		</footer>

@@ -757,11 +757,10 @@ a {
   text-align: center;
   right: 0;
   top: 0; }
-  .search-toggle:before {
-    color: tomato;
-    content: "o";
-    font-size: 20px;
-    margin-top: 14px; }
+  .search-toggle .genericons-neue {
+    line-height: 2;
+    font-size: 1.5rem;
+    color: tomato; }
   .search-toggle.active {
     background-color: gray; }
 
@@ -926,6 +925,10 @@ article.post .card, article.page .card {
   padding: 1.25rem;
   border-radius: 0.25rem;
   margin-bottom: 30px; }
+
+.entry-title {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word; }
 
 /*--------------------------------------------------------------
 ## Comments
@@ -4180,16 +4183,22 @@ html {
   background-color: rgba(0, 0, 0, 0.03);
   border-top: 1px solid rgba(0, 0, 0, 0.125); }
 
+.sticky .card {
+  background-color: beige; }
+
 .grid-item {
   margin-top: 37.5px; }
+  .grid-item.page {
+    margin-top: 0px; }
   .grid-item.has-post-thumbnail {
     margin-top: 0; }
 
-.entry-meta {
+.grid-item .entry-meta {
   position: absolute;
+  font-size: 1rem;
   left: calc(50% - (45px / 2));
   top: calc(0px - (75px / 2)); }
-  .entry-meta .hexagon {
+  .grid-item .entry-meta .hexagon {
     position: relative;
     display: flex;
     margin: 0 auto;
@@ -4201,10 +4210,10 @@ html {
     color: white;
     font-weight: bold;
     text-align: center; }
-    .entry-meta .hexagon span {
+    .grid-item .entry-meta .hexagon span {
       z-index: 1;
       margin: auto; }
-  .entry-meta .hexagon:before, .entry-meta .hexagon:after {
+  .grid-item .entry-meta .hexagon:before, .grid-item .entry-meta .hexagon:after {
     content: "";
     position: absolute;
     top: 0;
@@ -4215,12 +4224,12 @@ html {
     width: 100%;
     top: 0;
     left: 0; }
-  .entry-meta .hexagon:before {
+  .grid-item .entry-meta .hexagon:before {
     -webkit-transform: rotate(60deg);
     -moz-transform: rotate(60deg);
     transform: rotate(60deg);
     transition: all 1s 0.5s; }
-  .entry-meta .hexagon:after {
+  .grid-item .entry-meta .hexagon:after {
     -webkit-transform: rotate(-60deg);
     -moz-transform: rotate(-60deg);
     transform: rotate(-60deg);
@@ -4231,6 +4240,13 @@ html {
   text-align: center; }
   .meta li:not(:last-child) {
     margin-right: .5rem; }
+  .meta .genericons-neue {
+    font-size: 1.2rem;
+    margin-top: -3px;
+    margin-right: 3px; }
+
+.entry-meta {
+  font-size: 1.2rem; }
 
 .avatar {
   margin-bottom: .25rem; }

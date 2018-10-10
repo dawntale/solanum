@@ -4260,11 +4260,20 @@ html {
 
 .site-footer {
   background-color: #373d44;
-  padding: 1.5rem 2rem .75rem;
-  border-radius: 20px 20px 0 0; }
+  padding: 6rem 0 2rem; }
   .site-footer .site-info {
     text-align: center;
     color: #a0acb9; }
+  .site-footer span {
+    display: block; }
+    .site-footer span a {
+      color: tomato; }
+      .site-footer span a:hover, .site-footer span a:focus, .site-footer span a:active {
+        color: #a0acb9; }
+      .site-footer span a:visited {
+        color: tomato; }
+  .site-footer .theme-credit {
+    font-size: .9rem; }
 
 @media (min-width: 576px) {
   html {

@@ -315,12 +315,33 @@ html {
 
 .site-footer {
 	background-color: $color__background-bluegray;
-	padding: 1.5rem 2rem .75rem;
-	border-radius: 20px 20px 0 0;
+    padding: 6rem 0 2rem;
 
 	.site-info {
 		text-align: center;
 		color: $color__text-gray;
+	}
+
+	span {
+		display: block;
+
+		a {
+			color: tomato;
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: $color__text-gray;
+			}
+
+			&:visited {
+				color: tomato;
+			}
+		}
+	}
+
+	.theme-credit {
+		font-size: .9rem;
 	}
 }
 

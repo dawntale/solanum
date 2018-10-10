@@ -14,7 +14,7 @@
 		percentPosition: true
 	});
 
-	$( '.search-toggle' ).on( 'click.twentyfourteen', function( event ) {
+    $( '.search-toggle' ).on( 'click.twentyfourteen', function( event ) {
 		var that    = $( this ),
 			wrapper = $( '#search-container' ),
 			container = that.find( 'a' );
@@ -32,4 +32,5 @@
 			wrapper.find( '.search-field' ).focus();
 		}
 	} );
+
 } )();

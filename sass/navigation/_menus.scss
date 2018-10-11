@@ -12,6 +12,8 @@
     	border: 0;
     	border-radius: 0;
     	background: none;
+		height: 52px;
+		margin: auto;
     }
 
 	.bar1, .bar2, .bar3 {
@@ -111,6 +113,8 @@
 		display: block;
 		text-decoration: none;
 		padding: .75rem 1.25rem;
+		height: 52px;
+		line-height: 2;
 	}
 
 	.current_page_item > a,
@@ -171,16 +175,6 @@
 	display: block;
 }
 
-@media screen and (min-width: 782px) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: flex;
-		margin: auto;
-	}
-}
-
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
@@ -210,7 +204,7 @@
     right: 0;
     width: 100%;
     z-index: 2;
-    top: 48px;
+    top: 50px;
 
     &.hide {
 	    display: none;
@@ -218,27 +212,45 @@
 }
 
 .search-box {
-    background-color: gray;
+    background-color: lightgray;
     padding: 12px;
+    display: flex;
 }
 
 .search-toggle {
-	background-color: lightgray;
+	background-color: tomato;
     cursor: pointer;
-    height: 48px;
-    width: 48px;
+    height: 52px;
+    width: 52px;
     position: absolute;
     text-align: center;
     right: 0;
     top: 0;
 
     .genericons-neue {
-		line-height: 2;
+		padding: 14px;
 		font-size: 1.5rem;
-		color: tomato;
+		color: white;
     }
 
     &.active {
-    	background-color: gray;
+    	background-color: lightgray;
     }
+}
+
+@media screen and (min-width: 768px) {
+	.menu-toggle,
+	.toggled .menu-toggle,
+	.main-navigation .menu-toggle {
+		display: none;
+	}
+	.main-navigation ul,
+	.menu-toggle, .main-navigation.toggled ul {
+		display: flex;
+		margin: auto;
+	}
+
+	.main-navigation.toggled ul {
+		width: auto;
+	}
 }

@@ -4343,6 +4343,14 @@ html {
 
 .sticky .card {
   background-color: beige; }
+  .sticky .card:before {
+    content: "\f308";
+    font-size: 7rem;
+    font-family: "Genericons-Neue";
+    position: absolute;
+    color: rgba(255, 99, 71, 0.3);
+    right: 10px;
+    top: -10px; }
 
 .grid-item {
   margin-top: 37.5px; }

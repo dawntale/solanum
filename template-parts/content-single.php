@@ -46,8 +46,10 @@
 			) );
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
-				'after'  => '</div>',
+				'before'      => '<div class="page-links"><div>Page: </div>' . __( '', '_s' ),
+				'after'       => '</div>',
+				'link_before' => '<div class="page-number">',
+				'link_after'  => '</div>',
 			) );
 			?>
 		</div><!-- .entry-content -->

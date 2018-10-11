@@ -763,7 +763,9 @@ a {
 .posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 1.5em;
-  overflow: hidden; }
+  overflow: hidden;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word; }
 
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
@@ -799,7 +801,6 @@ a {
   background-color: tomato;
   cursor: pointer;
   height: 52px;
-  width: 52px;
   position: absolute;
   text-align: center;
   right: 0;
@@ -828,24 +829,50 @@ a {
 --------------------------------------------------------------*/
 .pagination,
 .post-navigation {
-  padding-left: 15px;
-  padding-right: 15px; }
+  margin-left: 15px;
+  margin-right: 15px;
+  box-shadow: inset 0 -7px 0 0 lightgrey; }
 
-.pagination .nav-links {
+.pagination {
   text-align: center;
-  border-radius: 0.25rem; }
+  font-weight: bold;
+  background-color: #f1f1f1; }
+  .pagination .page-numbers {
+    display: inline-block;
+    text-decoration: none;
+    line-height: 4;
+    height: 70px;
+    min-width: 50px;
+    text-align: center;
+    border-bottom: 7px solid transparent;
+    margin-right: 10px; }
+  .pagination .page-numbers.current {
+    border-bottom-color: tomato; }
+  .pagination a.page-numbers:hover {
+    border-bottom-color: gray; }
 
-.pagination .page-numbers {
-  background-color: #f1f1f1;
-  display: inline-block;
-  padding: .5rem .75rem;
-  line-height: 1;
-  text-decoration: none;
-  border-radius: 0.25rem; }
+.nav-links .genericons-neue {
+  transform: rotate(90deg);
+  padding-right: 2px; }
 
-.pagination .page-numbers.current,
-.pagination a.page-numbers:hover {
-  background: tomato; }
+.page-links {
+  clear: both;
+  margin: 1.5em 0;
+  display: flex;
+  font-weight: bold; }
+  .page-links div {
+    line-height: 2;
+    margin-right: 20px; }
+  .page-links .page-number {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-bottom: 7px solid transparent;
+    margin-right: 10px; }
+    .page-links .page-number:hover, .page-links .page-number:focus {
+      border-bottom-color: tomato; }
+  .page-links > .page-number {
+    border-bottom-color: lightgray; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -994,10 +1021,6 @@ a {
   margin: 0;
   padding: 1.25rem; }
 
-.page-links {
-  clear: both;
-  margin: 0 0 1.5em; }
-
 article.post .card, article.page .card {
   margin-top: 0; }
 
@@ -1106,6 +1129,9 @@ article.post .card, article.page .card {
     left: 0px;
     top: 0px; }
 
+.pingback .comment-body {
+  margin-bottom: 1.5em; }
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
@@ -1153,8 +1179,14 @@ object {
   .wp-caption .wp-caption-text {
     margin: 0.8075em 0; }
 
-.wp-caption-text {
-  text-align: center; }
+.wp-caption,
+.gallery-caption {
+  color: #666;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-style: italic;
+  margin-bottom: 1.5em;
+  max-width: 100%; }
 
 /*--------------------------------------------------------------
 ## Galleries
@@ -4407,9 +4439,9 @@ html {
   margin: 0;
   text-align: center; }
   .meta li:not(:last-child) {
-    margin-right: .5rem; }
+    margin-right: 1rem; }
   .meta .genericons-neue {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-top: -3px;
     margin-right: 3px; }
 

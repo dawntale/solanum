@@ -182,6 +182,8 @@
 	.site-main & {
 		margin: 0 0 1.5em;
 		overflow: hidden;
+		-ms-word-wrap: break-word;
+		word-wrap: break-word;
 	}
 
 	.nav-previous {
@@ -221,7 +223,6 @@
 	background-color: tomato;
     cursor: pointer;
     height: 52px;
-    width: 52px;
     position: absolute;
     text-align: center;
     right: 0;

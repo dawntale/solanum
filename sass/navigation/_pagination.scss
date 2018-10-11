@@ -1,26 +1,65 @@
 .pagination,
 .post-navigation {
-	padding-left: 15px;
-	padding-right: 15px;
+	margin-left: 15px;
+	margin-right: 15px;
+	box-shadow: inset 0 -7px 0 0 lightgrey;
 }
 
 .pagination {
-	.nav-links {
-		text-align: center;
-		border-radius: $border__radius-1;
-	}
+	text-align: center;
+	font-weight: bold;
+	background-color: $color__background-screen;
 
 	.page-numbers {
-		background-color: $color__background-screen;
 		display: inline-block;
-		padding: .5rem .75rem;
-		line-height: 1;
 		text-decoration: none;
-		border-radius: $border__radius-1;
+		line-height: 4;
+		height: 70px;
+		min-width: 50px;
+		text-align: center;
+		border-bottom: 7px solid transparent;
+		margin-right: 10px;
 	}
 
-	.page-numbers.current,
+	.page-numbers.current {
+		border-bottom-color: tomato;
+	}
+
 	a.page-numbers:hover {
-		background: tomato;
+		border-bottom-color: gray;
+	}
+}
+
+.nav-links .genericons-neue {
+    transform: rotate(90deg);
+    padding-right: 2px;
+}
+
+.page-links {
+	clear: both;
+	margin: 1.5em 0;
+	display: flex;
+	font-weight: bold;
+
+	div {
+		line-height: 2;
+		margin-right: 20px;
+	}
+
+	.page-number {
+		height: 50px;
+		width: 50px;
+		text-align: center;
+		border-bottom: 7px solid transparent;
+		margin-right: 10px;
+
+		&:hover,
+		&:focus {
+			border-bottom-color: tomato;
+		}
+	}
+
+	>.page-number {
+		border-bottom-color: lightgray;
 	}
 }

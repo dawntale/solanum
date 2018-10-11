@@ -53,8 +53,8 @@ get_header();
 
 		<?php the_posts_pagination( array(
 			'mid_size'  => 2,
-			'prev_text' => __( '&#8249; Prev', 'textdomain' ),
-			'next_text' => __( 'Next &#8250;', 'textdomain' ),
+			'prev_text' => __( '<i class="genericons-neue genericons-neue-expand"></i> Prev', '_s' ),
+			'next_text' => __( 'Next <i class="genericons-neue genericons-neue-collapse"></i>', '_s' ),
 		) ); ?>
 		
 	</section><!-- #primary -->

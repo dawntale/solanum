@@ -655,6 +655,7 @@ a {
   text-transform: uppercase;
   font-weight: bold;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
   /* Rotate first bar */
   /* Fade out the second bar */
   /* Rotate last bar */ }
@@ -721,7 +722,7 @@ a {
     text-decoration: none;
     padding: .75rem 1.25rem;
     height: 52px;
-    line-height: 2; }
+    line-height: 1.9; }
   .main-navigation .current_page_item > a,
   .main-navigation .current-menu-item > a,
   .main-navigation .current_page_ancestor > a,
@@ -831,25 +832,45 @@ a {
 .post-navigation {
   margin-left: 15px;
   margin-right: 15px;
-  box-shadow: inset 0 -7px 0 0 lightgrey; }
-
-.pagination {
-  text-align: center;
+  box-shadow: inset 0 -7px 0 0 lightgrey;
   font-weight: bold;
   background-color: #f1f1f1; }
-  .pagination .page-numbers {
+  .pagination a,
+  .pagination .page-numbers,
+  .post-navigation a,
+  .post-navigation .page-numbers {
     display: inline-block;
     text-decoration: none;
     line-height: 4;
     height: 70px;
     min-width: 50px;
+    border-bottom: 7px solid transparent; }
+  .pagination .page-numbers,
+  .post-navigation .page-numbers {
     text-align: center;
-    border-bottom: 7px solid transparent;
     margin-right: 10px; }
-  .pagination .page-numbers.current {
+  .pagination .page-numbers.current,
+  .post-navigation .page-numbers.current {
     border-bottom-color: tomato; }
-  .pagination a.page-numbers:hover {
+  .pagination a.page-numbers:hover,
+  .post-navigation a.page-numbers:hover {
     border-bottom-color: gray; }
+
+.pagination {
+  text-align: center; }
+
+.post-navigation .nav-previous a {
+  padding-left: 2rem; }
+
+.post-navigation .nav-next a {
+  padding-right: 2rem; }
+
+.post-navigation .nav-previous a,
+.post-navigation .nav-next a {
+  display: block; }
+  .post-navigation .nav-previous a:hover,
+  .post-navigation .nav-next a:hover {
+    border-bottom-color: tomato; }
 
 .nav-links .genericons-neue {
   transform: rotate(90deg);
@@ -1033,6 +1054,9 @@ article.post .card, article.page .card {
 .entry-title {
   -ms-word-wrap: break-word;
   word-wrap: break-word; }
+
+.no-sidebar .content-area {
+  margin: auto; }
 
 /*--------------------------------------------------------------
 ## Comments

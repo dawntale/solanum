@@ -48,9 +48,10 @@ function wpdocs_custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
-// Replaces the excerpt "Read More" text by a link
-/*function new_excerpt_more($more) {
-    global $post;
-	return '<a class="moretag" href="'. get_permalink($post->ID) . '"> <i class="genericons-neue genericons-neue-ellipsis"></i></a>';
+/**
+ * Specify a favicon link to theme folder.
+ */
+function favicon() {
+    echo '<link rel="shortcut icon" href="' . get_template_directory_uri() . '/favicon.ico" />';    
 }
-add_filter('excerpt_more', 'new_excerpt_more');*/
+add_action('wp_head', 'favicon');

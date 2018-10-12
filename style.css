@@ -1055,9 +1055,6 @@ article.post .card, article.page .card {
   -ms-word-wrap: break-word;
   word-wrap: break-word; }
 
-.no-sidebar .content-area {
-  margin: auto; }
-
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1256,6 +1253,13 @@ table {
 thead th {
   vertical-align: bottom;
   border-bottom: 2px solid #dee2e6; }
+
+/*--------------------------------------------------------------
+# Table
+--------------------------------------------------------------*/
+.no-sidebar .content-area {
+  margin-left: auto;
+  margin-right: auto; }
 
 /*--------------------------------------------------------------
 # Bootstrap

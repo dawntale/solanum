@@ -36,11 +36,11 @@
 		</div>
 
 		<footer class="card-footer">
-			<div class="avatar d-inline-flex">
+			<div class="avatar">
 				<?php echo get_avatar( get_the_author_meta( 'ID' ), 30, $default, $alt, array( 'class' => array( 'rounded-circle' ) ) ); ?>
 				<?php _s_posted_by(); ?>
 			</div>
-				<ul class="meta list-inline">
+				<ul class="meta">
 					<?php _s_entry_footer(); ?>
 				</ul>
 		</footer>

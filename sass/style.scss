@@ -123,7 +123,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "bootstrap/scss/mixins";
 
 @import "bootstrap/scss/grid";
-@import "bootstrap/scss/utilities";
+//@import "bootstrap/scss/utilities";
 @import "bootstrap/scss/type";
 
 /*--------------------------------------------------------------
@@ -131,6 +131,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 html {
 	font-size: 14px;
+	font-display: auto;
 }
 
 .site-branding {
@@ -162,6 +163,11 @@ html {
 .site-content {
 	top: -3rem;
 	position: relative;
+
+	.row {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }
 
 .header-image {
@@ -299,15 +305,21 @@ html {
 .meta {
 	margin: 0;
 	text-align: center;
+	padding-left: 0;
+	list-style: none;
 
-	li:not(:last-child) {
-		margin-right: 1rem;
+	li {
+		display: inline;
+
+		&:not(:last-child) {
+			margin-right: 1rem;
+		}
 	}
 
 	.genericons-neue {
 		font-size: 1.4rem;
 		margin-top: -3px;
-		margin-right: 3px;
+		margin-right: 5px;
 	}
 }
 
@@ -318,9 +330,11 @@ html {
 .avatar {
 	margin-bottom: .25rem;
 	font-weight: bold;
+	display: inline-flex;
 
 	img {
 		margin-right: 10px;
+		border-radius: 9999px;
 	}
 	.byline {
 		line-height: 1.7;

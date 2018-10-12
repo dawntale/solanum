@@ -1,36 +1,41 @@
 /**
- * File skip-link-focus-fix.js.
+ * File script.js.
  *
- * Helps with accessibility for keyboard only users.
+ * Theme scripts
  *
- * Learn more: https://git.io/vWdr2
  */
+
+// Massonry initiation script
 ( function() {
 	var elem = document.querySelector('.grid');
-	var msnry = new Masonry( elem, {
-		// options
-		itemSelector: '.grid-item',
-		columnWidth: '.grid-sizer',
-		percentPosition: true
-	});
 
-    $( '.search-toggle' ).on( 'click.twentyfourteen', function( event ) {
-		var that    = $( this ),
-			wrapper = $( '#search-container' ),
-			container = that.find( 'a' );
+	if (elem != null){
+		var msnry = new Masonry( elem, {
+			// options
+			itemSelector: '.grid-item',
+			columnWidth: '.grid-sizer',
+			percentPosition: true
+		});
+	}
+} )();
 
-		that.toggleClass( 'active' );
-		wrapper.toggleClass( 'hide' );
+// Search toggle on off
+( function() {
+	s_toggle = document.querySelector('.search-toggle');
 
-		if ( that.hasClass( 'active' ) ) {
-			container.attr( 'aria-expanded', 'true' );
+	s_toggle.onclick = function() {
+		var that = this,
+			wrapper = document.querySelector('#search-container'),
+			container = that.querySelectorAll('a');
+
+		that.classList.toggle('active');
+		wrapper.classList.toggle('hide');
+
+		if (that.classList.contains('active')){
+			container[0].setAttribute('aria-expanded', 'true');
 		} else {
-			container.attr( 'aria-expanded', 'false' );
+			container[0].setAttribute('aria-expanded', 'false');
 		}
 
-		if ( that.is( '.active' ) || $( '.search-toggle .screen-reader-text' )[0] === event.target ) {
-			wrapper.find( '.search-field' ).focus();
-		}
-	} );
-
+	}
 } )();

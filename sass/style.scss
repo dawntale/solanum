@@ -1,23 +1,19 @@
 /*!
-Theme Name: _s
-Theme URI: https://underscores.me/
-Author: Automattic
-Author URI: https://automattic.com/
-Description: Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Theme Name: Tomato
+Theme URI: https://dawntale.github.io/tomato-wordpress-theme/
+Author: dawntale
+Author URI: https://dawntale.github.io/
+Description: Tomato lets you build any kind of website from a personal blog, travel, food, to portfolio website for showcasing your works. It uses Bootstrap 4 grid as its base so it's fully Responsive and it has 1080p screen support. This theme support customizer which allow you to change the Background color, Forground color, Header image, Logo, and many more.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: _s
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Text Domain: tomato
+Tags: custom-background, custom-logo, custom-header, custom-menu, featured-images, threaded-comments, translation-ready, sidebar, bootstrap, blog, personal, hexagon, tomato, masonry, portfolio, one-column, two-column, seo-friendly
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+This theme is licensed under the GPL.
 
-_s is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
+Tomato is based on Underscores wordpress theme framework by Automattic.
 
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 /*--------------------------------------------------------------
@@ -150,7 +146,7 @@ html {
 	}
 
 	.custom-logo {
-		filter: drop-shadow(0 0 .75rem rgba(0, 0, 0, 0.4));
+		filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.4));
 	}
 }
 
@@ -171,7 +167,7 @@ html {
 }
 
 .header-image {
-	height: 300px;
+	height: 450px;
 	overflow: hidden;
 
 	img {

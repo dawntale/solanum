@@ -190,12 +190,16 @@ html {
 	margin-bottom: 30px;
 }
 
-.card {
+.card,
+.comments-area,
+.widget,
+.page-header {
 	background-color: $color__background-screen;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.07);
 }
 
 .card-header {
-	padding: .75rem 1.25rem;
+	padding: 20px 30px 10px;
 	margin-bottom: 0;
 	border-bottom: .75rem solid tomato;
 
@@ -208,14 +212,14 @@ html {
 .card-body {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    padding: 1.25rem;
+    padding: 30px;
     position: relative;
 	border-top: .75rem solid tomato;
 }
 
 .card-footer {
-    padding: .75rem 1.25rem;
-    background-color: rgba(171, 183, 193, 0.35);
+    padding: 1.5rem 30px;
+    background-color: rgba(209, 221, 230, 0.35);
     text-align: center;
     color: #6c757d;
 }

@@ -84,7 +84,7 @@ if ( ! function_exists( '_s_setup' ) ) :
 		add_theme_support( 'custom-header', array(
 			'default-image'          => '',
 			'width'                  => 1900,
-			'height'                 => 300,
+			'height'                 => 450,
 			'flex-height'            => false,
 			'flex-width'             => true,
 			'uploads'                => true,

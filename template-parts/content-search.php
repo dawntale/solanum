@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('grid-item col-sm-6 col-lg-4 col-xl-3'); ?> >
+<article id="post-<?php the_ID(); ?>" <?php post_class('grid-item col-sm-6 col-xl-4 col-xxl-3'); ?> >
 
 	<div class="card">
 		<div class="card-img-top">

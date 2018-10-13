@@ -21,7 +21,7 @@ get_header();
 		if ( have_posts() ) : ?>
 
 		<main id="main" class="site-main <?php if ( is_home() ): ?> grid <?php endif; ?>">
-			<div class="grid-sizer col-sm-6 col-lg-4 col-xl-3"></div>
+			<div class="grid-sizer col-sm-6 col-xl-4 col-xxl-3"></div>
 
 			<?php if ( is_home() && ! is_front_page() ) :
 				?>

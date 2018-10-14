@@ -2072,6 +2072,23 @@ html {
   position: relative;
   text-align: center; }
 
+.error404 .header-image {
+  display: none; }
+
+.error404 .site-content {
+  top: 0;
+  margin-top: 30px;
+  position: inherit;
+  text-align: center; }
+  .error404 .site-content .search-form {
+    margin-bottom: 60px; }
+
+.error404 .page-title {
+  font-size: 10rem;
+  font-family: "Srisakdi", sans-serif;
+  margin-top: 30px;
+  line-height: 1; }
+
 .site-content {
   top: -3rem;
   position: relative; }

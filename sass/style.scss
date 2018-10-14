@@ -119,7 +119,6 @@ Tomato is based on Underscores wordpress theme framework by Automattic.
 @import "bootstrap/scss/mixins";
 
 @import "bootstrap/scss/grid";
-//@import "bootstrap/scss/utilities";
 @import "bootstrap/scss/type";
 
 /*--------------------------------------------------------------
@@ -153,6 +152,28 @@ html {
 .site-header {
 	position: relative;
 	text-align: center;
+}
+
+.error404 {
+	.header-image {
+		display: none;
+	}
+	.site-content {
+		top: 0;
+		margin-top: 30px;
+		position: inherit;
+		text-align: center;
+
+		.search-form {
+			margin-bottom: 60px;
+		}
+	}
+	.page-title {
+		font-size: 10rem;
+		font-family: "Srisakdi", sans-serif;
+		margin-top: 30px;
+		line-height: 1;
+	}
 }
 	
 

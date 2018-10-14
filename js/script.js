@@ -10,11 +10,13 @@
 	var elem = document.querySelector('.grid');
 
 	if (elem != null){
-		var msnry = new Masonry( elem, {
-			// options
-			itemSelector: '.grid-item',
-			columnWidth: '.grid-sizer',
-			percentPosition: true
+		imagesLoaded( elem, function( instance ) {
+			var msnry = new Masonry( elem, {
+				// options
+				itemSelector: '.grid-item',
+				columnWidth: '.grid-sizer',
+				percentPosition: true
+			});
 		});
 	}
 } )();

@@ -16,7 +16,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="site-info container-fluid">
 			<span class="site-credit">
-				&#169; <?php echo date('Y'); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo bloginfo( 'name' ); ?></a> - All Right Reserved.
+				&#169; <?php echo date('Y'); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo bloginfo( 'name' ); ?></a> <?php esc_html_e( '- All Right Reserved.', '_s', '_s'); ?>
 			</span>
 			<span class="theme-credit">
 				<?php

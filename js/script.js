@@ -5,20 +5,23 @@
  *
  */
 
-// Massonry initiation script
+// Masonry and imagesLoaded
 ( function() {
 	var elem = document.querySelector('.grid');
 
-	if (elem != null){
-		imagesLoaded( elem, function( instance ) {
-			var msnry = new Masonry( elem, {
-				// options
-				itemSelector: '.grid-item',
-				columnWidth: '.grid-sizer',
-				percentPosition: true
-			});
-		});
-	}
+	// Massonry initiation script
+	var msnry = new Masonry( elem, {
+		// options
+		itemSelector: '.grid-item',
+		columnWidth: '.grid-sizer',
+		percentPosition: true
+	});
+
+	// imagesLoaded
+	imagesLoaded( elem ).on( 'progress', function() {
+		// layout Masonry after each image loads
+		msnry.layout();
+	});
 } )();
 
 // Search toggle on off

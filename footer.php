@@ -21,7 +21,7 @@
 			<span class="theme-credit">
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme %1$s by %2$s.', 'tomato' ), 'tomato', '<a href="https://automattic.com/">dawntale</a>' );
+				printf( esc_html__( 'Theme %1$s by %2$s.', 'tomato' ), 'tomato', '<a href="https://dawntale.github.io/">dawntale</a>' );
 				?>
 			</span>
 		</div><!-- .site-info -->

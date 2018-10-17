@@ -4,19 +4,19 @@
   "description": "Tomato lets you build any kind of website from a personal blog, travel, food, to portfolio website for showcasing your works. It uses Bootstrap 4 grid as its base so it's fully Responsive and it has 1080p screen support. This theme support customizer which allow you to change the Background color, Forground color, Header image, Logo, and many more.",
   "main": "index.php",
   "scripts": {
-    "sass": "node-sass -w -o --include-path scss sass/style.scss style.css",
-    "autoprefixer": "postcss -u autoprefixer -r style.css"
+    "sass": "node-sass -w --output-style compressed --include-path scss sass/style.scss style.css",
+    "autoprefixer": "postcss -u autoprefixer --no-map -r style.css"
   },
   "keywords": [
     "wordpress,theme,portfolio,personal,blog"
   ],
   "author": "dawntale",
   "license": "GPL",
-  "dependencies": {
-    "node-sass": "^4.9.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^9.1.5",
+    "bootstrap": "^4.1.3",
+    "node-sass": "^4.9.3",
     "postcss-cli": "^6.0.0"
   }
 }

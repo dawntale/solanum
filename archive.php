@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package _s
+ * @package tomato
  */
 
 get_header();
@@ -47,8 +47,8 @@ get_header();
 
 		<?php the_posts_pagination( array(
 			'mid_size'  => 2,
-			'prev_text' => __( '<i class="genericons-neue genericons-neue-expand"></i> Prev', '_s' ),
-			'next_text' => __( 'Next <i class="genericons-neue genericons-neue-collapse"></i>', '_s' ),
+			'prev_text' => __( '<i class="genericons-neue genericons-neue-expand"></i> Prev', 'tomato' ),
+			'next_text' => __( 'Next <i class="genericons-neue genericons-neue-collapse"></i>', 'tomato' ),
 		) ); ?>
 
 	</div><!-- #primary -->

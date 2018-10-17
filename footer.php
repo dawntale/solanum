@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package _s
+ * @package tomato
  */
 
 ?>
@@ -16,12 +16,12 @@
 	<footer id="colophon" class="site-footer">
 		<div class="site-info container-fluid">
 			<span class="site-credit">
-				&#169; <?php echo date('Y'); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo bloginfo( 'name' ); ?></a> <?php esc_html_e( '- All Right Reserved.', '_s', '_s'); ?>
+				&#169; <?php echo date('Y'); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo bloginfo( 'name' ); ?></a> <?php esc_html_e( '- All Right Reserved.', 'tomato', 'tomato'); ?>
 			</span>
 			<span class="theme-credit">
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme %1$s by %2$s.', '_s' ), '_s', '<a href="https://automattic.com/">dawntale</a>' );
+				printf( esc_html__( 'Theme %1$s by %2$s.', 'tomato' ), 'tomato', '<a href="https://automattic.com/">dawntale</a>' );
 				?>
 			</span>
 		</div><!-- .site-info -->

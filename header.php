@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package _s
+ * @package tomato
  */
 
 ?>
@@ -24,7 +24,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'tomato' ); ?></a>
 
 	<header id="masthead" class="site-header">
 		
@@ -40,10 +40,10 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif;
-			$_s_description = get_bloginfo( 'description', 'display' );
-			if ( $_s_description || is_customize_preview() ) :
+			$tomato_description = get_bloginfo( 'description', 'display' );
+			if ( $tomato_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $_s_description; /* WPCS: xss ok. */ ?></p>
+				<p class="site-description"><?php echo $tomato_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
@@ -61,7 +61,7 @@
 			?>
 			<div class="search-toggle">
 				<i class="genericons-neue genericons-neue-search"></i>
-				<a href="#search-container" class="screen-reader-text" aria-expanded="false" aria-controls="search-container"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
+				<a href="#search-container" class="screen-reader-text" aria-expanded="false" aria-controls="search-container"><?php _e( 'Search', 'tomato' ); ?></a>
 			</div>
 
 			<div id="search-container" class="search-box-wrapper hide">

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package _s
+ * @package tomato
  */
 
 ?>
@@ -13,7 +13,7 @@
 
 	<div class="card">
 		<div class="card-img-top">
-			<?php _s_post_thumbnail(); ?>
+			<?php tomato_post_thumbnail(); ?>
 		</div>
 		
 		<div class="card-body">
@@ -38,10 +38,10 @@
 		<footer class="card-footer">
 			<div class="avatar d-inline-flex">
 				<?php echo get_avatar( get_the_author_meta( 'ID' ), 30, $default, $alt, array( 'class' => array( 'rounded-circle' ) ) ); ?>
-				<?php _s_posted_by(); ?>
+				<?php tomato_posted_by(); ?>
 			</div>
 				<ul class="meta list-inline small">
-					<?php _s_entry_footer(); ?>
+					<?php tomato_entry_footer(); ?>
 				</ul>
 		</footer>
 	</div>

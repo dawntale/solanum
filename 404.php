@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package _s
+ * @package tomato
  */
 
 get_header();
@@ -15,11 +15,11 @@ get_header();
 			<section class="error-404 not-found">
 					<header>
 						<h1 class="page-title">404</h1>
-						<h2><?php esc_html_e( 'Stop! Page not found.', '_s' ); ?></h2>
+						<h2><?php esc_html_e( 'Stop! Page not found.', 'tomato' ); ?></h2>
 					</header><!-- .page-header -->
 
 					<div class="page-content">
-						<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', '_s' ); ?></p>
+						<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'tomato' ); ?></p>
 
 						<?php
 						get_search_form();
@@ -27,13 +27,13 @@ get_header();
 
 						<?php
 						/* translators: %1$s: smiley */
-						$_s_archive_content = '<p>' . esc_html__( 'Try looking in the monthly archives.', '_s' ) . '</p>';
+						$tomato_archive_content = '<p>' . esc_html__( 'Try looking in the monthly archives.', 'tomato' ) . '</p>';
 						?>
 
 						<div class="row">
 							<div class="col-lg-8 col-xxl-6" style="margin: auto;">
 								<?php
-								the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$_s_archive_content" );
+								the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$tomato_archive_content" );
 								?>
 							</div>
 						</div>

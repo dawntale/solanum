@@ -9,6 +9,10 @@
 ( function() {
 	var elem = document.querySelector('.grid');
 
+	if(elem == null){
+		return;
+	}
+
 	// Massonry initiation script
 	var msnry = new Masonry( elem, {
 		// options

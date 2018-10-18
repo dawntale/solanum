@@ -134,7 +134,9 @@ add_action( 'widgets_init', 'solanum_widgets_init' );
 function solanum_scripts() {
 	wp_enqueue_style( 'solanum-style', get_stylesheet_uri() );
 	
-	wp_enqueue_style ('genericon', get_template_directory_uri().'/genericons/genericons-neue.css', array('solanum-style'));
+	wp_enqueue_style('genericon', get_template_directory_uri() . '/genericons/genericons-neue.css', array('solanum-style'));
+
+	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.slim.min', array(), '20151215', true );
 
 	wp_enqueue_script( 'solanum-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

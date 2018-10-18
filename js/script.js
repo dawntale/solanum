@@ -6,14 +6,15 @@
  */
 
 // Masonry and imagesLoaded
-( function() {
+( function( $ ) {
+
 	var elem = document.querySelector('.grid');
 
 	if(elem == null){
 		return;
 	}
 
-	// Massonry initiation script
+	// Massonry first initiation script
 	var msnry = new Masonry( elem, {
 		// options
 		itemSelector: '.grid-item',
@@ -26,10 +27,29 @@
 		// layout Masonry after each image loads
 		msnry.layout();
 	});
-} )();
+
+	// Massonry second initiation script after infinite scroll loaded
+    $( document.body ).on( 'post-load', function () {
+
+		var msnry = new Masonry( elem, {
+			// options
+			itemSelector: '.grid-item',
+			columnWidth: '.grid-sizer',
+			percentPosition: true
+		});
+
+		imagesLoaded( elem ).on( 'progress', function() {
+			// layout Masonry after each image loads
+			msnry.layout();
+		});
+	});
+	
+} )( jQuery );
+
 
 // Search toggle on off
 ( function() {
+	
 	s_toggle = document.querySelector('.search-toggle');
 
 	s_toggle.onclick = function() {
@@ -45,6 +65,6 @@
 		} else {
 			container[0].setAttribute('aria-expanded', 'false');
 		}
-
 	}
+
 } )();

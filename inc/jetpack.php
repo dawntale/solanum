@@ -20,6 +20,7 @@ function solanum_jetpack_setup() {
 		'container' => 'main',
 		'render'    => 'solanum_infinite_scroll_render',
 		'footer'    => 'page',
+		'wrapper'   => false,
 	) );
 
 	// Add theme support for Responsive Videos.

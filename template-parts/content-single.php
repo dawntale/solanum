@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package tomato
+ * @package solanum
  */
 
 ?>
@@ -22,20 +22,20 @@
 			if ( 'post' === get_post_type() ) :
 				?>
 				<div class="entry-meta">
-					<?php tomato_posted_on(); ?> by
-					<?php tomato_posted_by(); ?>
+					<?php solanum_posted_on(); ?> by
+					<?php solanum_posted_by(); ?>
 				</div><!-- .entry-meta -->
 			<?php endif; ?>
 		</header><!-- .entry-header -->
 
-		<?php tomato_post_thumbnail(); ?>
+		<?php solanum_post_thumbnail(); ?>
 
 		<div class="entry-content">
 			<?php
 			the_content( sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'tomato' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'solanum' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -46,7 +46,7 @@
 			) );
 
 			wp_link_pages( array(
-				'before'      => '<div class="page-links"><div>Page: </div>' . __( '', 'tomato' ),
+				'before'      => '<div class="page-links"><div>Page: </div>' . __( '', 'solanum' ),
 				'after'       => '</div>',
 				'link_before' => '<div class="page-number">',
 				'link_after'  => '</div>',
@@ -56,7 +56,7 @@
 
 		<footer class="card-footer">
 				<ul class="meta list-inline">
-					<?php tomato_entry_footer(); ?>
+					<?php solanum_entry_footer(); ?>
 				</ul>
 		</footer>
 	</div>

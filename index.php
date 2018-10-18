@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package tomato
+ * @package solanum
  */
 
 get_header();
@@ -57,8 +57,8 @@ get_header();
 
 		<?php the_posts_pagination( array(
 			'mid_size'  => 2,
-			'prev_text' => __( '<i class="genericons-neue genericons-neue-expand"></i> Prev', 'tomato' ),
-			'next_text' => __( 'Next <i class="genericons-neue genericons-neue-collapse"></i>', 'tomato' ),
+			'prev_text' => __( '<i class="genericons-neue genericons-neue-expand"></i> Prev', 'solanum' ),
+			'next_text' => __( 'Next <i class="genericons-neue genericons-neue-collapse"></i>', 'solanum' ),
 		) ); ?>
 
 	</div><!-- #primary -->

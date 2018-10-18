@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package tomato
+ * @package solanum
  */
 
 ?>
@@ -16,12 +16,12 @@
 	<footer id="colophon" class="site-footer">
 		<div class="site-info container-fluid">
 			<span class="site-credit">
-				&#169; <?php echo date('Y'); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo bloginfo( 'name' ); ?></a> <?php esc_html_e( '- All Right Reserved.', 'tomato', 'tomato'); ?>
+				&#169; <?php echo date('Y'); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo bloginfo( 'name' ); ?></a> <?php esc_html_e( '- All Right Reserved.', 'solanum'); ?>
 			</span>
 			<span class="theme-credit">
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme %1$s by %2$s.', 'tomato' ), 'tomato', '<a href="https://dawntale.github.io/">dawntale</a>' );
+				printf( esc_html__( 'Theme %1$s by %2$s.', 'solanum' ), 'solanum', '<a href="https://dawntale.github.io/" target="_blank">dawntale</a>' );
 				?>
 			</span>
 		</div><!-- .site-info -->

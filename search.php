@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package tomato
+ * @package solanum
  */
 
 get_header();
@@ -16,7 +16,7 @@ get_header();
 			<h1 class="page-title">
 				<?php
 				/* translators: %s: search query. */
-				printf( esc_html__( 'Search Results for: %s', 'tomato' ), '<span>' . get_search_query() . '</span>' );
+				printf( esc_html__( 'Search Results for: %s', 'solanum' ), '<span>' . get_search_query() . '</span>' );
 				?>
 			</h1>
 		</header><!-- .page-header -->
@@ -53,8 +53,8 @@ get_header();
 
 		<?php the_posts_pagination( array(
 			'mid_size'  => 2,
-			'prev_text' => __( '<i class="genericons-neue genericons-neue-expand"></i> Prev', 'tomato' ),
-			'next_text' => __( 'Next <i class="genericons-neue genericons-neue-collapse"></i>', 'tomato' ),
+			'prev_text' => __( '<i class="genericons-neue genericons-neue-expand"></i> Prev', 'solanum' ),
+			'next_text' => __( 'Next <i class="genericons-neue genericons-neue-collapse"></i>', 'solanum' ),
 		) ); ?>
 		
 	</section><!-- #primary -->

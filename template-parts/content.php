@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package tomato
+ * @package solanum
  */
 
 ?>
@@ -13,7 +13,7 @@
 
 	<div class="card">
 		<div class="card-img-top">
-			<?php tomato_post_thumbnail(); ?>
+			<?php solanum_post_thumbnail(); ?>
 		</div>
 		
 		<div class="card-body">
@@ -23,7 +23,7 @@
 				<div class="entry-meta">
 					<a href="<?php echo get_permalink( $post->ID ); ?>">
 						<div class="hexagon">
-							<span>
+							<span title="<?php the_time( get_option( 'M j Y' ) ); ?>">
 								<?php the_time('M j Y') ?>
 							</span>
 						</div>
@@ -38,10 +38,10 @@
 		<footer class="card-footer">
 			<div class="avatar">
 				<?php echo get_avatar( get_the_author_meta( 'ID' ), 30, $default, $alt, array( 'class' => array( 'rounded-circle' ) ) ); ?>
-				<?php tomato_posted_by(); ?>
+				<?php solanum_posted_by(); ?>
 			</div>
 				<ul class="meta">
-					<?php tomato_entry_footer(); ?>
+					<?php solanum_entry_footer(); ?>
 				</ul>
 		</footer>
 	</div>

@@ -8,33 +8,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package tomato
+ * @package solanum
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses tomato_header_style()
+ * @uses solanum_header_style()
  */
-function tomato_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'tomato_custom_header_args', array(
+function solanum_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'solanum_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'tomato_header_style',
+		'wp-head-callback'       => 'solanum_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'tomato_custom_header_setup' );
+add_action( 'after_setup_theme', 'solanum_custom_header_setup' );
 
-if ( ! function_exists( 'tomato_header_style' ) ) :
+if ( ! function_exists( 'solanum_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see tomato_custom_header_setup().
+	 * @see solanum_custom_header_setup().
 	 */
-	function tomato_header_style() {
+	function solanum_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

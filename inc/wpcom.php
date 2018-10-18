@@ -4,7 +4,7 @@
  *
  * This file is centrally included from `wp-content/mu-plugins/wpcom-theme-compat.php`.
  *
- * @package tomato
+ * @package solanum
  */
 
 /**
@@ -12,7 +12,7 @@
  *
  * @global array $themecolors
  */
-function tomato_wpcom_setup() {
+function solanum_wpcom_setup() {
 	global $themecolors;
 
 	// Set theme colors for third party services.
@@ -28,4 +28,4 @@ function tomato_wpcom_setup() {
 		);
 	}
 }
-add_action( 'after_setup_theme', 'tomato_wpcom_setup' );
+add_action( 'after_setup_theme', 'solanum_wpcom_setup' );

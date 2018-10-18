@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package tomato
+ * @package solanum
  */
 
 /**
@@ -11,7 +11,7 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function tomato_body_classes( $classes ) {
+function solanum_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
@@ -24,17 +24,17 @@ function tomato_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'tomato_body_classes' );
+add_filter( 'body_class', 'solanum_body_classes' );
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
-function tomato_pingback_header() {
+function solanum_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
-add_action( 'wp_head', 'tomato_pingback_header' );
+add_action( 'wp_head', 'solanum_pingback_header' );
 
 
 /**
@@ -55,3 +55,11 @@ function favicon() {
     echo '<link rel="shortcut icon" href="' . get_template_directory_uri() . '/favicon.ico" />';    
 }
 add_action('wp_head', 'favicon');
+
+/**
+ * Registers an editor stylesheet for the theme.
+ */
+function solanum_add_editor_styles() {
+    add_editor_style( 'style.css' );
+}
+add_action( 'admin_init', 'solanum_add_editor_styles' );

@@ -37,12 +37,12 @@
 
 		<footer class="card-footer">
 			<div class="avatar">
-				<?php echo get_avatar( get_the_author_meta( 'ID' ), 30, $default, $alt, array( 'class' => array( 'rounded-circle' ) ) ); ?>
+				<?php echo get_avatar( get_the_author_meta( 'ID' ), 30, array( 'class' => array( 'rounded-circle' ) ) ); ?>
 				<?php solanum_posted_by(); ?>
 			</div>
-				<ul class="meta">
-					<?php solanum_entry_footer(); ?>
-				</ul>
+			<ul class="meta">
+				<?php solanum_entry_footer(); ?>
+			</ul>
 		</footer>
 	</div>
 

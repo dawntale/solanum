@@ -138,10 +138,6 @@ function solanum_scripts() {
 
 	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.slim.min', array(), '20151215', true );
 
-	wp_enqueue_script( 'solanum-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'solanum-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
 	wp_enqueue_script( 'solanum-masonry.pkgd.min', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'solanum-imagesloaded.pkgd.min', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array(), '20151215', true );

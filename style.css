@@ -1974,7 +1974,7 @@ a:hover, a:active {
   transform: rotate(135deg) translate(-8px, 8px);
 }
 
-.main-navigation .menu-menu-1-container {
+.main-navigation > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1995,6 +1995,7 @@ a:hover, a:active {
   top: 100%;
   left: -999em;
   z-index: 99999;
+  display: block;
 }
 
 .main-navigation ul ul ul {
@@ -2012,7 +2013,8 @@ a:hover, a:active {
 }
 
 .main-navigation ul ul a {
-  width: 200px;
+  height: inherit;
+  width: 100%;
 }
 
 .main-navigation ul li:hover > ul,
@@ -2051,8 +2053,13 @@ a:hover, a:active {
 }
 
 .main-navigation .current_page_item,
-.main-navigation .current-menu-item {
+.main-navigation .current-menu-item,
+.main-navigation .current-menu-parent {
   background-color: tomato;
+}
+
+.main-navigation .current-menu-parent:before {
+  border: solid white !important;
 }
 
 .main-navigation .menu-item-has-children {
@@ -2174,6 +2181,9 @@ a:hover, a:active {
     display: -ms-flexbox;
     display: flex;
     margin: auto;
+  }
+  .main-navigation ul ul a {
+    width: 200px;
   }
   .main-navigation.toggled ul {
     width: auto;

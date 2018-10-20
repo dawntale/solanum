@@ -25,6 +25,30 @@ function solanum_customize_register( $wp_customize ) {
 			'render_callback' => 'solanum_customize_partial_blogdescription',
 		) );
 	}
+	
+	/**
+	 * Solanum Theme Layouts.
+	 *
+	 */
+	$wp_customize->add_section( 'solanum_theme_layouts_section' , array(
+        'title'    => __( 'Solanum Layouts', 'solanum' ),
+    ) );   
+
+    $wp_customize->add_setting( 'solanum_theme_layouts_settings' , array(
+		'default'   => 'right_sidebar',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'solanum_layout', array(
+        'label'          => __( 'Sidebar', 'solanum' ),
+		'section'        => 'solanum_theme_layouts_section',
+		'settings'       => 'solanum_theme_layouts_settings',
+		'type'           => 'radio',
+		'choices'        => array(
+			'right_sidebar' => __( 'Right Sidebar' ),
+			'left_sidebar' => __( 'Left Sidebar' ),
+		)
+	) ) );
 }
 add_action( 'customize_register', 'solanum_customize_register' );
 

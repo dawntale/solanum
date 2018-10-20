@@ -13,7 +13,12 @@ if ( ! is_home() ){
 		return;
 	} ?>
 
-	<aside id="secondary" class="widget-area col-lg-4">
+	<aside id="secondary" class="widget-area col-lg-4
+		<?php if( get_theme_mod( 'solanum_theme_layouts_settings' ) == 'left_sidebar' ) : ?>
+			order-last order-lg-first
+		<?php endif ?>
+	">
+	
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
 	</aside>
 

@@ -32,7 +32,7 @@
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="card-footer">
-			<ul class="meta list-inline">
+			<ul class="meta">
 				<?php
 				edit_post_link(
 					sprintf(

@@ -55,7 +55,7 @@
 		</div><!-- .entry-content -->
 
 		<footer class="card-footer">
-				<ul class="meta list-inline">
+				<ul class="meta">
 					<?php solanum_entry_footer(); ?>
 				</ul>
 		</footer>

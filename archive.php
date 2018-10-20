@@ -11,7 +11,7 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<header class="page-header col-lg-6 mx-auto">
+		<header class="page-header col-lg-8 col-xl-6">
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );

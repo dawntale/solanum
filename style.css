@@ -2102,7 +2102,6 @@ a:hover, a:active {
 .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden;
-  -ms-word-wrap: break-word;
   word-wrap: break-word;
 }
 
@@ -2445,6 +2444,12 @@ a:hover, a:active {
   padding: 30px;
 }
 
+.post,
+.page,
+.comment-content {
+  word-wrap: break-word;
+}
+
 article.post .card, article.page .card {
   margin-top: 0;
 }
@@ -2454,11 +2459,6 @@ article.post .card, article.page .card {
   padding: 30px !important;
   margin: 0 15px 30px;
   width: auto;
-}
-
-.entry-title {
-  -ms-word-wrap: break-word;
-  word-wrap: break-word;
 }
 
 .card,

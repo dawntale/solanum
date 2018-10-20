@@ -80,14 +80,6 @@
 			a {
 				width: 200px;
 			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
 		}
 
 		li:hover > ul,
@@ -184,7 +176,6 @@
 	.site-main & {
 		margin: 0 0 1.5em;
 		overflow: hidden;
-		-ms-word-wrap: break-word;
 		word-wrap: break-word;
 	}
 

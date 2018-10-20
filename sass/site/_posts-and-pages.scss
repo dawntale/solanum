@@ -17,6 +17,12 @@
 	padding: 30px;
 }
 
+.post,
+.page,
+.comment-content {
+	word-wrap: break-word;
+}
+
 article {
 	&.post,
 	&.page {
@@ -33,12 +39,6 @@ article {
 	margin: 0 15px 30px;
 	width: auto;
 }
-
-.entry-title {
-	-ms-word-wrap: break-word;
-	word-wrap: break-word;
-}
-
 
 .card,
 .comments-area,

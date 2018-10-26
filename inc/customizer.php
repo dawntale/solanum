@@ -36,7 +36,8 @@ function solanum_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting( 'solanum_theme_layouts_settings' , array(
 		'default'   => 'right_sidebar',
-        'transport' => 'refresh',
+		'transport' => 'refresh',
+		'sanitize_callback' => 'solanum_theme_layouts_sanitize',
     ) );
 
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'solanum_layout', array(
@@ -45,12 +46,24 @@ function solanum_customize_register( $wp_customize ) {
 		'settings'       => 'solanum_theme_layouts_settings',
 		'type'           => 'radio',
 		'choices'        => array(
-			'right_sidebar' => __( 'Right Sidebar' ),
-			'left_sidebar' => __( 'Left Sidebar' ),
+			'right_sidebar' => __( 'Right Sidebar', 'solanum' ),
+			'left_sidebar' => __( 'Left Sidebar', 'solanum' ),
 		)
 	) ) );
 }
 add_action( 'customize_register', 'solanum_customize_register' );
+
+/**
+ * Solanum layout setting sanitize.
+ *
+ */
+function solanum_theme_layouts_sanitize( $value ) {
+	if ( !in_array($value, array('right_sidebar', 'left_sidebar'))) {
+		$value = 'right_sidebar';
+	}
+
+	return $value;
+}
 
 /**
  * Render the site title for the selective refresh partial.

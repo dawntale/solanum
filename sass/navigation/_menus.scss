@@ -49,6 +49,11 @@
 		display: flex;
 	}
 
+	.search-toggle,
+	.search-box-wrapper {
+		display: inherit;
+	}
+
 	ul {
 		display: none;
 		list-style: none;

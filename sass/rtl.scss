@@ -1,0 +1,90 @@
+/*
+Theme Name: Cocoberg
+
+Adding support for languages written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+https://codex.wordpress.org/Right-to-Left_Language_Support
+
+*/
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+.main-navigation {
+	.menu-item-has-children {
+		&:before {
+			left: 15px;
+			right: initial;
+		}
+
+		>a {
+			padding-left: 3rem;
+			padding-right: 1.25rem;
+		}
+
+		li {
+			text-align: right;
+		}
+	}
+
+	ul {
+		padding-right: 0;
+	}
+
+	ul ul ul {
+		right: -999em;
+		left: initial;
+		top: 0;
+	}
+
+	ul ul li:hover > ul, 
+	ul ul li.focus > ul {
+		right: 100%;
+		left: initial;
+	}
+
+	ul li:hover > ul, 
+	ul li.focus > ul {
+		right: auto;
+		left: initial;
+	}
+}
+
+.main-navigation ul ul {
+	right: -999em;
+	left: initial;
+}
+
+.search-field {
+    border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+	border-top-right-radius: .25rem !important;
+	border-bottom-right-radius: .25rem !important;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	margin-left: 0;
+	margin-right: -1px;
+}
+
+input[type="submit"].search-submit {
+    border-top-left-radius: .25rem;
+	border-bottom-left-radius: .25rem;
+	border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.meta {
+	padding-right: 0;
+
+	li:not(:last-child) {
+		margin-left: 1rem;
+		margin-right: 0;
+	}
+}

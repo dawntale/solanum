@@ -5,6 +5,7 @@
   "main": "index.php",
   "scripts": {
     "sass": "node-sass -w --output-style=expanded sass/style.scss style.css",
+    "sassrtl": "node-sass -w --output-style=expanded sass/rtl.scss rtl.css",
     "autoprefixer": "postcss -u autoprefixer --no-map -r style.css"
   },
   "keywords": [

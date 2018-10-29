@@ -3,7 +3,7 @@ Contributors: dawntale
 Tags: custom-background, custom-logo, custom-header, custom-menu, featured-images, threaded-comments, translation-ready, blog, sticky-post, two-column, left-sidebar, right-sidebar, grid-layout, full-width-template, theme-options, photography, portfolio
 Requires at least: 4.0
 Tested up to: 4.9.8
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,12 @@ It supports all JetPack modules.
 
 == Changelog ==
 
+= 1.1.1 =
+* Enqueue Google Font
+* Use core-bundled scripts (jQuery, Masonry, imagesLoaded)
+* Change images used in screenshot
+* Bug fixes
+
 = 1.1.0 =
 * Add sidebar position setting
 * Add RTL support
@@ -39,6 +45,9 @@ It supports all JetPack modules.
 
 == Upgrade Notice ==
 
+= 1.1.1 =
+* Fix Wordpress Theme Review issue
+
 = 1.1.0 =
 * You can choose sidebar position.
 * This version fixes a security related bug.
@@ -49,4 +58,4 @@ It supports all JetPack modules.
 * Masonry © 2018 David DeSandro, MIT
 * imagesLoaded © 2018 David DeSandro, MIT
 * Genericons © 2018 Automattic, Inc., GPLv2
-* Images © 2018 Unsplash & Pexels, CC0
+* Images © 2018 Pixabay, CC0

@@ -14,11 +14,11 @@ Solanum lets you build any kind of website from a personal blog, travel, food, t
 - [Masonry](https://masonry.desandro.com)
 - [imagesLoaded](https://imagesloaded.desandro.com)
 - [Genericons Neue](http://genericons.com)
-- [Unsplash](https://unsplash.com) and [Pexels](https://www.pexels.com)
+- [Pixabay](https://pixabay.com)
 
 ### License
 
-Code license is under GPL.
+Code license is under GPL v2 or later.
 
 ### Creator(s)
 

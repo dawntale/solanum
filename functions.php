@@ -134,14 +134,16 @@ add_action( 'widgets_init', 'solanum_widgets_init' );
 function solanum_scripts() {
 	wp_enqueue_style( 'solanum-style', get_stylesheet_uri() );
 	
-	wp_enqueue_style('genericon', get_template_directory_uri() . '/genericons/genericons-neue.css', array('solanum-style'));
+	wp_enqueue_style( 'solanum-font', 'https://fonts.googleapis.com/css?family=KoHo|Srisakdi:700&amp;subset=latin-ext');
 
-	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.slim.min', array(), '20151215', true );
+	wp_enqueue_style( 'genericon', get_template_directory_uri() . '/genericons/genericons-neue.css');
 
-	wp_enqueue_script( 'solanum-masonry.pkgd.min', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'jquery', '', array(), false, true );
 
-	wp_enqueue_script( 'solanum-imagesloaded.pkgd.min', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'imagesloaded', '', array(), false, true );
 
+	wp_enqueue_script( 'masonry', '', array(), false, true );
+	
 	wp_enqueue_script( 'solanum-script', get_template_directory_uri() . '/js/script.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

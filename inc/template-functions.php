@@ -43,18 +43,10 @@ add_action( 'wp_head', 'solanum_pingback_header' );
  * @param int $length Excerpt length.
  * @return int (Maybe) modified excerpt length.
  */
-function wpdocs_custom_excerpt_length( $length ) {
+function solanum_custom_excerpt_length( $length ) {
     return 80;
 }
-add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
-
-/**
- * Specify a favicon link to theme folder.
- */
-function favicon() {
-    echo '<link rel="shortcut icon" href="' . get_template_directory_uri() . '/favicon.ico" />';    
-}
-add_action('wp_head', 'favicon');
+add_filter( 'excerpt_length', 'solanum_custom_excerpt_length', 999 );
 
 /**
  * Registers an editor stylesheet for the theme.
